@@ -1,0 +1,28 @@
+
+
+
+
+<h1>
+  {{title}}
+</h1>
+
+
+    <button id="authorize-button" (click)="login()" style="-display: none;">Authorize</button>
+    <button id="signout-button" (click)="logout()" style="-display: none;">Sign Out</button>
+    
+    
+    <button id="getdata-button" (click)="getData()" style="-display: none;">Get data</button>
+    
+    <button id="signinstatus-button" (click)="showStatus()" style="-display: none;">Show status</button>
+
+    <div id="content"></div>
+
+Is signed in: {{ isSignedIn() }}
+
+    <ul *ngIf='contacts && contacts.length'>
+            <li *ngFor='let contact of contacts'>
+                            {{ contact.title }}
+                            {{ contact.email }}
+                    </li>
+    </ul>
+
